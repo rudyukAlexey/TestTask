@@ -1,0 +1,21 @@
+﻿	
+	<div class = "signin" ng-show = "!app.isUserExists()">
+		<form class = "loginform" name = "loginform" ng-submit = "app.checkUser()" novalidate>
+			<input type = "text" 
+				class = "credentials" 
+				name = "login" 
+				ng-model = "app.user.login" 
+				ng-minlength="3"
+				placeholder = "Login" required>
+			<p ng-show="loginform.login.$error.minlength" class="errorminlength">Login is too short.</p>
+			<input type = "password" 
+				class = "credentials" 
+				name = "password" 
+				ng-model = "app.user.password" 
+				placeholder = "Password" required>
+			<input type = "submit" 
+				class = "submitbutton" 
+				value = "Submit" 
+				ng-disabled="loginform.$invalid">
+		</form>
+	</div>

@@ -1,0 +1,76 @@
+﻿
+	<div class = "maincontent" ng-show = "app.isUserExists()">
+		
+		<form class="addworkerform" name = "addworkerform" ng-submit="app.addWorker()" novalidate>
+			<input type = "text" 
+				class = "addworkerinfo" 
+				name = "firstname"
+				ng-model = "app.worker.firstName" 
+				placeholder = "First Name" required>
+			<input type = "text" 
+				class = "addworkerinfo" 
+				name = "lastname"
+				ng-model = "app.worker.lastName" 
+				placeholder = "Last Name" required>
+			<input type = "text" 
+				class = "addworkerinfo" 
+				name = "position"
+				ng-model = "app.worker.position" 
+				placeholder = "Position" required>
+			<input type = "submit" 
+				class = "savebutton"
+				ng-disabled="addworkerform.$invalid"
+				value = "Save">
+		</form>
+		
+		<hr class = "separator" />
+		
+		<div class = "filterblock">
+			<input type="text" class="filter" placeholder="Filter" ng-model="searchWorker">
+		</div>
+		
+		<table class = "workertable">
+			<tr>
+				<td></td>
+				<td>
+					<a class = "content" ng-click="sortType = 'firstName'; sortReverse = !sortReverse">
+						First Name
+						<div ng-show="sortType == 'firstName' && !sortReverse" class="scroll-up"></div>
+						<div ng-show="sortType == 'firstName' && sortReverse" class="scroll-down"></div>
+					</a>
+				</td>
+				<td>
+					<a class = "content" ng-click="sortType = 'lastName'; sortReverse = !sortReverse">
+						Last Name
+						<div ng-show="sortType == 'lastName' && !sortReverse" class="scroll-up"></div>
+						<div ng-show="sortType == 'lastName' && sortReverse" class="scroll-down"></div>
+					</a>
+				</td >
+				<td >
+					<a class = "content" ng-click="sortType = 'position'; sortReverse = !sortReverse">
+						Position
+						<div ng-show="sortType == 'position' && !sortReverse" class="scroll-up"></div>
+						<div ng-show="sortType == 'position' && sortReverse" class="scroll-down"></div>
+					</a>
+				</td>
+			<tr>
+			<tr ng-repeat = "worker in app.workers | orderBy:sortType:!sortReverse | filter:searchWorker">
+				<td><input type = "checkbox" ng-model = "worker.checked"></td>
+				<td><input type = "text" class = "workerinfo" ng-model = "worker.firstName" ng-change="worker.modified = true"></td>
+				<td><input type = "text" class = "workerinfo" ng-model = "worker.lastName" ng-change="worker.modified = true"></td>
+				<td><input type = "text" class = "workerinfo" ng-model = "worker.position" ng-change="worker.modified = true"></td>
+				<td ng-if = "worker.modified == true"><div ng-click = "app.updateWorker(worker)" class = "acceptbutton"></div></td>
+			</tr>
+		</table>
+		
+		<div class = "deleteblock">
+			<button class = "deletebutton" ng-click = "app.deleteWorkers()">Delete</button>
+		</div>
+		
+		<hr class = "separator" />
+		
+		<div class = "logoffblock">
+			<button class = "logoffbutton" ng-click = "app.logOff()">Log Off</button>
+		</div>
+	</div>
+			

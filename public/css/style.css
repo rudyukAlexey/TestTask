@@ -1,0 +1,245 @@
+﻿html, body{
+	padding: 0;
+	margin: 0;
+	font-family: Tahoma;
+	font-size: 14px;
+	text-align: center;
+}
+
+.ng-invalid.ng-dirty{
+  border-color: #FA787E;
+}
+.ng-valid.ng-dirty{
+  border-color: #a8e051
+}
+
+.signin{
+	position: absolute;
+	margin: 0px auto 0px auto;
+	left: 0px; right: 0px; top: 105px;
+	width: 350px;
+	min-height: 210px;
+	background-color: white;
+	box-shadow: 0 0 15px rgba(0,0,0,0.19);
+	border-radius: 7px;
+}
+
+.credentials {
+    margin-top: 15px;
+    height: 45px;
+    width: 307px;
+    background-color: rgba(239, 239, 239, 0.23);
+    color: #424242;
+    padding: 2px 16px;
+    font-size: 12px;
+    border-radius: 4px;
+    border: 1px solid #d0d0d0;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.submitbutton {
+	margin-top: 15px;
+    height: 45px;
+    width: 307px;
+    background-color: #a8e051;
+    border: none;
+    color: white;
+    padding: 2px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.errorminlength {
+	margin: 0px;
+	font-size: 12px;
+	color: #FA787E;
+	float: left;
+	padding: 2px 24px;
+}
+
+.maincontent {
+	margin: 50px auto;
+	width: 670px;
+	height: auto;
+	min-height: 400px;
+	position: relative;
+	overflow: hidden;
+	background-color: white;
+	box-shadow: 0 0 10px rgba(0,0,0,0.19);
+	border-radius: 7px;
+}
+
+.addworkerinfo {
+	margin: 15px 15px 0px 5px;
+    height: 40px;
+    width: 186px;
+    background-color: rgba(239, 239, 239, 0.23);
+    color: #424242;
+    padding: 2px 16px;
+    font-size: 12px;
+    border-radius: 4px;
+    border: 1px solid #d0d0d0;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.savebutton {
+	margin: 15px 36px 15px 5px;
+    height: 40px;
+    width: 186px;
+    background-color: #a8e051;
+    border: none;
+	float: right;
+    color: white;
+    padding: 2px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.separator {
+	border: none;
+	color: #a8e051;
+	background-color: #a8e051;
+	height: 2px;
+	width: 670px;
+}
+
+.filterblock {
+	width: 650px;
+	min-height: 60px;
+	position: relative;
+	overflow: hidden;
+}
+
+.filter {
+	margin: 20px 15px 0px 5px;
+    height: 40px;
+    width: 186px;
+	float: right;
+    background-color: rgba(239, 239, 239, 0.23);
+    color: #424242;
+    padding: 2px 16px;
+    font-size: 12px;
+    border-radius: 4px;
+    border: 1px solid #d0d0d0;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.workertable {
+	margin-top: 15px;
+	margin-left: 42px;
+	width: 500px;
+	height: auto;
+	position: relative;
+	overflow: hidden;
+	font-size: 14px;
+	background: white;
+	border-radius: 4px;
+	border-spacing: 0;
+	border-collapse: collapse;
+	text-align: left;
+}
+
+td {
+	border: 2px solid #a8e051;
+	height: 30px;
+}
+
+.content {
+	height: 30px;
+	border: 0px;
+    padding: 2px 16px;
+    font-size: 12px;
+	cursor: pointer;
+}
+
+.scroll-up {
+	margin-left: 5px;
+	display: inline-block;
+	height: 12px;
+	width: 12px;
+	background-image: url(../images/scroll-up.png);
+	background-size:  cover;
+	cursor: pointer;
+}
+
+.scroll-down {
+	margin-left: 5px;
+	display: inline-block;
+	height: 12px;
+	width: 12px;
+	background-image: url(../images/scroll-down.png);
+	background-size:  cover;
+	cursor: pointer;
+}
+
+.workerinfo {
+	height: 30px;
+	border: 0px;
+    padding: 2px 16px;
+    font-size: 12px;
+	cursor: pointer;
+}
+
+.acceptbutton {
+	height: 34px;
+	width: 34px;
+	background-image: url(../images/accept.png);
+	background-size:  cover;
+	cursor: pointer;
+}
+
+.deleteblock {
+	width: 650px;
+	height: auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.deletebutton {
+	margin: 15px 15px 5px 5px;
+    height: 40px;
+    width: 186px;
+    background-color: #a8e051;
+    border: none;
+	float: right;
+    color: white;
+    padding: 2px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.logoffblock {
+	margin: 0px 0px 20px 0px;
+	width: 650px;
+	height: auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.logoffbutton {
+	margin: 15px 10px 0px 5px;
+    height: 40px;
+    width: 200px;
+    background-color: #a8e051;
+    border: none;
+	float: center;
+    color: white;
+    padding: 2px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
